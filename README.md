@@ -149,6 +149,18 @@ import_tables:
 
 ------
 
+## 开发检查
+
+本仓库在 CI 中使用 `yamllint` 和 `luacheck` 检查所有 `.yaml` 与 `.lua` 文件。
+在本地可以使用以下命令执行相同的检查：
+
+```bash
+sudo apt-get update
+sudo apt-get install -y yamllint luacheck
+yamllint $(git ls-files '*.yaml')
+luacheck $(git ls-files '*.lua')
+```
+
 ## 支持
 
 - [Mintimate's Blog: https://www.mintimate.cn](https://www.mintimate.cn)
