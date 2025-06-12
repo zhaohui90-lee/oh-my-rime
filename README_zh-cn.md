@@ -49,6 +49,9 @@ Rime 配置教程：
 
 1. 安装[Rime输入法](https://rime.im/)并注销或重启电脑；
 2. 下载本仓库所有配置文件到本地rime配置文件；
+   - 若在 Electron 应用中集成 Rime，请将文件复制到应用的 rime 目录
+     （如 Windows 的 `%APPDATA%\\<app-name>\\rime` 或 Linux/macOS 的
+     `~/.config/<app-name>/rime`），并确保包含 `electron.yaml`；
 3. 重新部署Rime
 4. 开始使用
 5. 根据自己习惯，进行二次修改
@@ -68,6 +71,9 @@ Rime 配置教程：
   - iBus:`~/.config/ibus/rime`
   - Fcitx5: `~/.local/share/fcitx5/rime`
 - Fctix5 Android(小企鹅入法): `/storage/emulated/0/Android/data/org.fcitx.fcitx5.android/files/data/rime/`
+- Electron 应用: 取决于应用名称，通常在
+  - Windows: `%APPDATA%\\<app-name>\\rime`
+  - macOS/Linux: `~/.config/<app-name>/rime`
 
 本地rime日志文件默认地址如下：
 
@@ -90,6 +96,7 @@ Rime 配置教程：
 - `default.yaml` 设置输入法、如何切换输入法、翻页等；建议自行创建`default.custom.yaml`来覆写薄荷配置的`default.yaml`.
 - `squirrel.yaml` 鼠须管( Mac 版本 )设置哪些软件默认英文输入，输入法皮肤等；如需自定义，建议自行创建`squirrel.custom.yaml`来覆写。
 - `weasel.yaml` 小狼毫( Win 版本 )设置哪些软件默认英文输入，输入法皮肤等；如需自定义，建议自行创建`weasel.custom.yaml`来覆写。
+- `electron.yaml` Electron 前端配置文件，在将薄荷输入法嵌入 Electron 应用时使用，可创建 `electron.custom.yaml` 进行覆写。
 
 配置文件中大部分都有注释，配合教程：[配置覆写](https://www.mintimate.cc/zh/guide/configurationOverride.html)
 
