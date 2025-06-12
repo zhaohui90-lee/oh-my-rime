@@ -4,6 +4,10 @@
 # Fork From: https://github.com/rime/librime/blob/3bc65c990546aa2062ecd1eb593d54d2949644cd/data/minimal/default.yaml
 config_version: "24.03.24"
 
+# When running inside an Electron application (for example using
+# electron-rime), place `electron.yaml` alongside this file so that
+# the Electron front-end can load its specific settings.
+
 # 以下内容，实际会由default.custom.yaml和方案配置所覆写
 ## 九宫格依赖于 rime_mint ，如果需要使用其他方案（比如: 小鹤双拼的 九宫格），可以使用 custom 文件覆写
 schema_list:
@@ -14,6 +18,8 @@ schema_list:
   - schema: wubi98_mint          # 五笔98-五笔小筑
   - schema: wubi86_jidian        # 五笔86-极点86
   - schema: t9                   # 仓九宫格-全拼输入
+  # Electron front-ends use the same schema list but require
+  # `electron.yaml` for UI configuration.
   # 以下方案薄荷进行了适配，但是没有激活
   # - schema: double_pinyin_abc    # 智能ABC双拼
   # - schema: double_pinyin_mspy   # 微软双拼

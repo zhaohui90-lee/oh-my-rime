@@ -1,0 +1,20 @@
+# Electron settings
+# encoding: utf-8
+
+# Rime configuration for Electron-based front-ends.
+# Copy this file into the rime directory used by your Electron application.
+
+config_version: '2024-09-14'
+
+style:
+  color_scheme: mint_light_blue
+  color_scheme_dark: mint_dark_blue
+  inline_preedit: true
+  text_orientation: horizontal
+  candidate_list_layout: stacked
+  horizontal: false
+  remember_size: false
+  font_face: 'PingFang SC'
+  font_point: 14
+  label_font_point: 14
+  comment_font_point: 12

@@ -46,6 +46,9 @@ The following tutorials are available for Linux, macOS and Windows (Xp~)
 
 1. Install [Rime Input Method](https://rime.im/) and log out or restart the computer;
 2. Download all the configuration files of this warehouse to the local rime configuration file;
+   - When embedding Rime into an Electron application, copy these files to the application's rime directory
+     (e.g. `%APPDATA%\\<app-name>\\rime` on Windows or `~/.config/<app-name>/rime` on Linux/macOS)
+     and make sure `electron.yaml` is present;
 3. Redeploy Rime;
 4. Get started
 5. Make secondary modifications according to your own habits
@@ -62,6 +65,9 @@ The default address of the local rime configuration file is as follows
   - iBus: `~/.config/ibus/rime`
   - Fcitx5: `~/.local/share/fcitx5/rime`
 - Fctix5 Android: `/storage/emulated/0/Android/data/org.fcitx.fcitx5.android/files/data/rime/`
+- Electron app: depends on the application name, usually located at
+  - Windows: `%APPDATA%\\<app-name>\\rime`
+  - macOS/Linux: `~/.config/<app-name>/rime`
 
 The default address of the local rime log file is as follows:
 -Windows
@@ -86,6 +92,7 @@ If you like to use Rime to type long sentences, it is strongly recommended to us
 - `default.yaml` set the input method, how to switch the input method, turn the page, etc.
 - `squirrel.yaml` Mac version to set which software defaults to English input, input method skin, etc.
 - `weasel.yaml` Win version to set which software defaults to English input, input method skin, etc.
+- `electron.yaml` Configuration for Electron front-ends. Place it in the application's rime directory when embedding Oh-my-rime into an Electron app, and override via `electron.custom.yaml` if needed.
 
 Most of the configuration files are commented. Cooperate with the tutorial: [Configuration Overrides and Customization](https://www.mintimate.cc/en/guide/configurationOverride.html)
 
