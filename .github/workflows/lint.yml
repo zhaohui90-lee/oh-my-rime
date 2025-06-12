@@ -1,0 +1,19 @@
+name: Lint
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install linters
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y yamllint luacheck
+      - name: Lint YAML files
+        run: yamllint $(git ls-files '*.yaml')
+      - name: Lint Lua scripts
+        run: luacheck $(git ls-files '*.lua')
